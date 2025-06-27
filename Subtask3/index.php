@@ -2,9 +2,8 @@
 
 declare(strict_types=1);
 
-function get_action(string $string): ?string
+function get_action(string $string): string
 {
-    $string = substr($string, 1);
     if (mb_strpos($string, '+') !== false) {
         $action = '+';
     } elseif (mb_strpos($string, '**') !== false) {
